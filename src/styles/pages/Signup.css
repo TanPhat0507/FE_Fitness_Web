@@ -21,6 +21,7 @@
 }
 
 .signup-box h2 {
+    margin-top: 15px;
     display: flex;
     justify-content: start;
     margin-bottom: 2rem;
@@ -66,9 +67,17 @@
     margin-top: 10px;
 }
 
-.signup-button:hover {
-    background-color: #e65c5c;
+.signup-button:hover{
+    background-color: #EB9785;
 }
+
+.signup-button:active{
+    background-color:#5F2A1F;
+    
+}
+
+
+
 
 /* Adjusted 'or' divider styling */
 .or-divider {

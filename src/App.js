@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Signup from './components/pages/Signup';
+import Login from './components/pages/Login'; // Import the Login component
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 const App = () => {
@@ -21,7 +22,10 @@ const App = () => {
             path="/signup" 
             element={<Signup onComplete={completeSignup} />} 
           />
-         
+          <Route 
+            path="/login" 
+            element={<Login />} // Add the route for Login
+          />
         </Routes>
       </div>
     </Router>
