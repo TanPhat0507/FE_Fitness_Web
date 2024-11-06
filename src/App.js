@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Signup from './components/pages/Signup';
 import Login from './components/pages/Login'; // Import the Login component
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Resetpw from './components/pages/Resetpw';
 
 const App = () => {
   const [isSignupComplete, setIsSignupComplete] = useState(false);
@@ -26,6 +27,11 @@ const App = () => {
             path="/login" 
             element={<Login />} // Add the route for Login
           />
+          <Route
+            path="/resetpw"
+            element={<Resetpw />}
+          />
+
         </Routes>
       </div>
     </Router>
