@@ -48,7 +48,7 @@ const Resetpw = () => {
             <div className="login-box">
                 <h2>Reset Password</h2>
                 <p className="enter_email">Choose a new password for your account</p>
-                
+
                 <div className="input-container">
                     <input
                         type="password"
@@ -65,9 +65,9 @@ const Resetpw = () => {
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                 </div>
-                
+
                 {error && <p className="error-message">{error}</p>}
-                
+
                 <button onClick={() => navigate('/login')} className="back-to-login-button">
                     Back to login
                 </button>
