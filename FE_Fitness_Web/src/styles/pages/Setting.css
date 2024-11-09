@@ -1,0 +1,17 @@
+.setting {
+    margin-left: 250px;
+    margin-top: 20px;
+    padding-left: 50px;
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.setting-title {
+    margin-top: 80px;
+    font-size: 30px;
+    margin-left: 15px;
+    margin-bottom: -80px;
+}
