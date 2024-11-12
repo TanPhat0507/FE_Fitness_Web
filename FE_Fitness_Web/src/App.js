@@ -4,6 +4,7 @@ import Login from './components/pages/Login'; // Import the Login component
 // import Resetpw from './components/pages/Resetpw';
 import Setting from './components/pages/Setting';
 import Sidebar from './components/reuse/Sidebar';
+import MyExcerise from './components/pages/MyExcerise';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 
@@ -28,7 +29,7 @@ const App = () => {
           />
           {/* Route for Log in */}
           <Route
-            path="/login"
+            path="/"
             element={<Login onComplete={completeLogin} />}
           />
           {/* Protected Dashboard Routes */}
@@ -41,24 +42,25 @@ const App = () => {
                   <Dashboard />
                 </>
               ) : (
-                <Navigate to="/login" /> // Redirect to Authentication if not authenticated
+                <Navigate to="/" /> // Redirect to Authentication if not authenticated
               )
             }
           /> */}
           {/* ProtectedMy Excerise Routes */}
-          {/* <Route 
-                        path="/myexcersise" 
-                        element={
-                            isLoginComplete ? (
-                                <>
-                                    <SideBar />
-                                    <MyExcerise />
-                                </>
-                            ) : (
-                                <Navigate to="/login" />
-                            )
-                        } 
-                    /> */}
+          <Route
+          // path="/myexcersise"
+          // element={
+          //   isLoginComplete ? (
+          //     <>
+          //       {/* <SideBar /> */}
+          //       <MyExcerise />
+          //     </>
+          //   ) : (
+          //     <Navigate to="/" />
+          //   )
+          // }
+          />
+
           {/* Protected Setting Routes */}
           {/* <Route
             path="/setting"
@@ -69,22 +71,31 @@ const App = () => {
                   <Setting />
                 </>
               ) : (
-                <Navigate to="/login" />
+                <Navigate to="/" />
               )
             }
           /> */}
           <Route
-            path="/setting"
+            path="/sidebar"
             element={
               <>
-                {/* <Sidebar /> */}
-                <Setting />
+                <Sidebar />
+                {/* <Setting /> */}
+              </>
+            }
+          />
+          <Route
+            path="/myexcerise"
+            element={
+              <>
+                <MyExcerise />
+                {/* <Setting /> */}
               </>
             }
           />
         </Routes>
       </div>
-    </Router>
+    </Router >
   );
 };
 

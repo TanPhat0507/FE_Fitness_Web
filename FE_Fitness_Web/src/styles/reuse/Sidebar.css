@@ -1,127 +1,171 @@
-@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
-
-.sidebar {
-    width: 220px;
-    height: 100%;
-    background-color: #1F263E;
-    color: white;
-    padding: 20px 10px;
-    border: 1px solid #1F263E;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(0);
-    /* Show sidebar by default */
-}
-
-:where(.css-dev-only-do-not-override-ccdg5a).ant-menu-light.ant-menu-root.ant-menu-inline,
-:where(.css-dev-only-do-not-override-ccdg5a).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,
-:where(.css-dev-only-do-not-override-ccdg5a).ant-menu-light.ant-menu-root.ant-menu-vertical,
-:where(.css-dev-only-do-not-override-ccdg5a).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical {
-    border-inline-end: none;
-    background-color: #1F263E;
-}
-
-.general {
-    position: fixed;
-    top: 8px;
-    left: 20px;
-    z-index: 1100;
-    cursor: pointer;
-    font-size: 24px;
-    display: none;
-    /* Hidden on larger screens */
-}
-
-.logo {
-    font-family: "Kantumruy Pro", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: white;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.menu {
-    border: none;
-}
-
-.menu .ant-menu-item {
-    padding-left: 20px !important;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.menu .ant-menu-item-selected {
-    background-color: #303750 !important;
-    /* Set selected background to darker color */
-    color: white !important;
-    /* Set selected text color to white */
-}
-
-.logo {
+/* .setting {
+    margin-left: 250px;
+    margin-top: 20px;
+    padding-right: 50px;
+    width: calc(100% - 250px);
     display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.setting-title {
+    margin-top: 80px;
+    font-size: 30px;
+    margin-left: 15px;
+    margin-bottom: -80px;
+}
+
+.profile {
+    margin-top: 30px;
+}
+
+.height {
+    position: relative;
+    display: inline-block;
+
+}
+
+label[for="no2-box"],
+label[for="mor2-box"],
+label[for="nor2-box"],
+label[for="ver2-box"] {
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+.setting {
+    background-color: rgb(242, 245, 253);
+
+}
+
+.account,
+.profile,
+.goal {
+    background-color: white;
+    margin: 95px 15px -70px 15px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-top: 5px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.unit-kg-goal,
+.unit-kg,
+.unit-cm {
+    margin-left: 5px;
+}
+
+.edit-icon-name,
+.edit-icon-email,
+.edit-icon-password {
+    width: 30px;
+    height: 20px;
+    margin-bottom: -5px;
+}
+
+#female-box {
+    margin-left: 15px;
+}
+
+.cancel-modal,
+.save-modal {
+    width: 100px;
+}
+
+.modal-btn {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+/* 
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.modal,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    border-radius: 10px;
+    max-width: 800px;
+    min-width: 300px;
+    padding-left: 10px;
+    padding-top: 0px;
+} */
+.sidebar {
+    width: 60px;
+    height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: width 0.3s;
+    position: fixed;
+    z-index: 100;
+}
+
+.sidebar.collapsed {
+    width: 0;
+    overflow: hidden;
+}
+
+.logo {
     margin-bottom: 30px;
-    /* Add some space between logo and menu */
 }
 
 .logo-img {
-    margin-bottom: 8px;
-    margin-left: 35px;
-    margin-right: 4px;
-    /* Space between the logo and the text */
+    width: 40px;
 }
 
-
-
-/* Larger screens (min-width: 768px), sidebar should always be visible */
-@media (min-width: 768px) {
-    .sidebar {
-        transform: translateX(0);
-        /* Ensure sidebar is visible */
-    }
-
-    .general {
-        display: none;
-        /* Hide hamburger on larger screens */
-    }
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Smaller screens (max-width: 768px), hide sidebar by default and show hamburger */
-@media (max-width: 425px) {
-    .general {
-        display: block;
-        /* Show hamburger button */
-        z-index: 1200;
-    }
-
-    .sidebar {
-        transform: translateX(-100%);
-        /* Hide sidebar by default on small screens */
-        z-index: 1100;
-    }
-
-    .sidebar.collapsed {
-        transform: translateX(0);
-        /* Show sidebar when toggled */
-    }
+.menu .ant-menu-item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: none;
 }
 
-@media (max-width:768) {
-    .sidebar {
-        transform: translateX(100%);
-        /* Hide sidebar by default on small screens */
-        z-index: 2100;
-    }
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
 
-    .genral {
-        display: block;
-        /* Show hamburger button */
-        z-index: 1200;
-    }
-
+.menu-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 110;
 }
