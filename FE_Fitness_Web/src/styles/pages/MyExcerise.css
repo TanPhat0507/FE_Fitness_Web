@@ -1,0 +1,19 @@
+.myexcersise {
+
+    margin-left: 90px;
+    padding-left: 50px;
+    width: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-modal {
+    margin-top: 30px;
+}

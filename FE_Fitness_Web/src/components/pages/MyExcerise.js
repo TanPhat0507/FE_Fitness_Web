@@ -3,7 +3,7 @@ import React from 'react';
 import { Layout, Menu, Avatar, Button, Table, DatePicker, notification } from 'antd';
 import { UserOutlined, CalendarOutlined, LogoutOutlined, PieChartOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-// import '../../styles/pages/MyExcerise.css';
+import '../../styles/pages/MyExcerise.css';
 
 
 // import { DateContext } from './DateContext'; // Đường dẫn đã được sửa
@@ -11,9 +11,9 @@ import { Link } from 'react-router-dom';
 // import deleteIcon from '../../images/Delete.svg';
 // import editIcon from '../../images/Edit.svg';
 //Layout
-const { Header, Content, Sider } = Layout;
+
 //Modal
-const MyMeal = () => {
+const MyExcerise = () => {
 
     // Toggle Modal 1
     // const toggleModal = () => {
@@ -40,40 +40,13 @@ const MyMeal = () => {
     // };
 
     return (
-        <Layout style={{ minHeight: '100vh' }}>
-            <Sider width={200} className="site-layout-background">
-                <div className="logo">Nutritioners</div>
-                <Menu mode="inline" defaultSelectedKeys={['2']}>
-                    <Menu.Item key="1" icon={<PieChartOutlined />}>
-                        <Link to="/">Dashboard</Link>
-                    </Menu.Item>
-                    <Menu.Item key="2" icon={<PieChartOutlined />}>
-                        <Link to="/my-excerise">My Excerise</Link>
-                    </Menu.Item>
-                    <Menu.Item key="3">
-                        <Link to="/my-report">Report</Link>
-                    </Menu.Item>
-                    <Menu.Item key="4" icon={<LogoutOutlined />}>
-                        Logout
-                    </Menu.Item>
-                </Menu>
-            </Sider>
-
-            <Layout>
-                <Content style={{ padding: '16px 24px', backgroundColor: '#F2F5FD' }}>
-                    <div className='mymeal'>
-                        <div className='control'>
-                            <h1 className="meal-title">My Excersise</h1>
-                            <Button className='btn-modal' classtype="primary" Open>+ Add new excerise</Button>
-                        </div>
-
-
-                        <DatePicker />
-
-                    </div>
-                </Content>
-            </Layout>
-        </Layout>
+        <div className='myexcersise'>
+            <div className='control'>
+                <h1 className="excersise-title">My Excersise</h1>
+                <Button className='btn-modal' classtype="primary" Open>+ Add new excerise</Button>
+            </div>
+            <DatePicker />
+        </div>
     );
 };
-export default MyMeal;
+export default MyExcerise;

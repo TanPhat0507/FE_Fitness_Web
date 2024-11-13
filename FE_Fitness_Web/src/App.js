@@ -88,8 +88,9 @@ const App = () => {
             path="/myexcerise"
             element={
               <>
+                <Sidebar />
                 <MyExcerise />
-                {/* <Setting /> */}
+
               </>
             }
           />
