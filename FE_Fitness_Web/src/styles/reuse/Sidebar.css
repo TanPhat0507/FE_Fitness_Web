@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500&display=swap');
+
+/* Sidebar Styling */
+.sidebar {
+    width: 100px;
+    height: 100%;
+    background-color: #F8F8F8;
+    padding: 20px 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+    /* Show sidebar by default */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.logo-img {
+    width: 100px;
+}
+
+.menu {
+    border: none;
+    background-color: transparent;
+
+
+
+}
+
+.menu .ant-menu-item {
+    padding-left: 30px !important;
+    margin-bottom: 20px;
+}
+
+.menu .ant-menu-item-selected {
+    background-color: #E16449 !important;
+    color: #E16449 !important;
+}
+
+/* menu-icon Icon */
+.menu-icon {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 1200;
+    display: none;
+    cursor: pointer;
+}
+
+/* Show menu-icon icon and hide sidebar by default on small screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 1100;
+    }
+
+    .sidebar.collapsed {
+        transform: translateX(0);
+    }
+}
+
+/* Sidebar always visible on larger screens */
+@media (min-width: 768px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .sidebar {
+        transform: translateX(0);
+    }
+}
