@@ -17,3 +17,8 @@
 .btn-modal {
     margin-top: 30px;
 }
+
+.short-date-picker {
+    width: 150px;
+    /* Adjust the width as needed */
+}

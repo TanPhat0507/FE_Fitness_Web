@@ -45,7 +45,8 @@ const MyExcerise = () => {
                 <h1 className="excersise-title">My Excersise</h1>
                 <Button className='btn-modal' classtype="primary" Open>+ Add new excerise</Button>
             </div>
-            <DatePicker />
+            <DatePicker className="short-date-picker" />
+
         </div>
     );
 };
