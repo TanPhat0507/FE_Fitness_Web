@@ -9,27 +9,28 @@ const Setting = () => {
     return (
         <div className="setting">
             <h1 className="setting-title">Settings</h1>
+            <div className="setting-body">
+                {/* Name Section */}
+                <div className="name">
+                    <p className="title-input">Name</p>
+                    <input type="text" className="name-input" />
+                    <img src={edit} alt="edit" className="edit-icon-name" />
+                </div>
 
-            {/* Name Section */}
-            <div className="name">
-                <p>Name</p>
-                <input type="text" className="name-input" />
-                <img src={edit} alt="edit" className="edit-icon-name" />
-            </div>
+                {/* Email Section */}
+                <div className="email">
+                    <p className="title-input">Email</p>
+                    <input type="email" className="email-input" />
+                    <img src={edit} alt="edit" className="edit-icon-email" />
 
-            {/* Email Section */}
-            <div className="email">
-                <p>Email</p>
-                <input type="email" className="email-input" />
-                <img src={edit} alt="edit" className="edit-icon-email" />
+                </div>
 
-            </div>
-
-            {/* Password Section */}
-            <div className="password">
-                <p>Password</p>
-                <input type="password" className="password-input" />
-                <img src={edit} alt="edit" className="edit-icon-password" />
+                {/* Password Section */}
+                <div className="password">
+                    <p className="title-input">Password</p>
+                    <input type="password" className="password-input" />
+                    <img src={edit} alt="edit" className="edit-icon-password" />
+                </div>
             </div>
         </div>
     );

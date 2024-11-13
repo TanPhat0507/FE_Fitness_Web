@@ -76,11 +76,11 @@ const App = () => {
             }
           /> */}
           <Route
-            path="/sidebar"
+            path="/setting"
             element={
               <>
                 <Sidebar />
-                {/* <Setting /> */}
+                <Setting />
               </>
             }
           />

@@ -1,17 +1,42 @@
 .setting {
-    margin-left: 250px;
-    margin-top: 20px;
+    margin-left: 90px;
     padding-left: 50px;
-    width: calc(100% - 250px);
+    width: calc(100% - 100px);
     display: flex;
     flex-direction: column;
     height: 100%;
     box-sizing: border-box;
 }
 
-.setting-title {
-    margin-top: 80px;
-    font-size: 30px;
-    margin-left: 15px;
-    margin-bottom: -80px;
+.setting-body {
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
 }
+
+.edit-icon-name,
+.edit-icon-email,
+.edit-icon-password {
+    width: 30px;
+    height: 35px;
+    margin-bottom: -12px;
+    margin-left: 3px;
+}
+
+.password-input,
+.name-input,
+.email-input {
+    border-radius: 3px;
+    height: 25px;
+    border: 2px solid #BABCC3;
+}
+
+.title-input {
+    margin-bottom: 0px;
+}
+
+/* @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+
+    } */
