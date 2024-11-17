@@ -13,7 +13,15 @@
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
     transform: translateX(0);
+
     /* Show sidebar by default */
+}
+
+:where(.css-dev-only-do-not-override-tpassh).ant-menu-light.ant-menu-root.ant-menu-inline,
+:where(.css-dev-only-do-not-override-tpassh).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,
+:where(.css-dev-only-do-not-override-tpassh).ant-menu-light.ant-menu-root.ant-menu-vertical,
+:where(.css-dev-only-do-not-override-tpassh).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical {
+    border-inline-end: rgba(5, 5, 5, 0.06);
 }
 
 .logo {
@@ -53,6 +61,11 @@
     z-index: 1200;
     display: none;
     cursor: pointer;
+}
+
+.icon {
+    padding-left: 3px;
+    padding-top: 5px;
 }
 
 /* Show menu-icon icon and hide sidebar by default on small screens */

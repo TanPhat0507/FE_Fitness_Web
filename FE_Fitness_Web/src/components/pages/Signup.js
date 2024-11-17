@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import '../../styles/pages/Signup.css';
 import { useNavigate } from 'react-router-dom';
-import gg_logo from '../../images/gg_icon.png';
-import logo from '../../images/Logo.svg'; // Adjusted path for the logo
+import logo from '../../images/Logo.svg';
 const Signup = () => {
-    const [username, setUsername] = useState('');
+    const [name, setName] = useState(''); // Đổi từ username thành name
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const handleSignup = async () => {
-        if (!username || !email || !password) {
+        if (!name || !email || !password) {
             setError('Please fill in all fields');
             return;
         }
 
         const userData = {
-            username: username.trim(),
+            name: name.trim(), // Đổi từ username thành name
             email: email.trim(),
             password: password,
         };
 
         try {
-            const response = await fetch('http://localhost:3000/api/users/signup', {
+            const response = await fetch('http://localhost:3000/api/users/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -33,7 +32,7 @@ const Signup = () => {
 
             if (response.ok) {
                 setError('');
-                navigate('/authentication');
+                navigate('/login');
             } else {
                 const errorData = await response.json();
                 setError(errorData.message || 'Registration failed.');
@@ -45,17 +44,15 @@ const Signup = () => {
 
     return (
         <div className="signup-container">
-
             <img src={logo} alt="Logo" className="logo-top-left" />
-
             <div className="signup-box">
                 <h2>Create account</h2>
                 <div className="input-container">
                     <input
                         type="text"
-                        placeholder="Username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Name" // Đổi từ Username thành Name
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
                 </div>
                 <div className="input-container">
@@ -76,7 +73,7 @@ const Signup = () => {
                 </div>
                 <div className="checkbox-container">
                     <input type="checkbox" id="terms" />
-                    <label htmlFor="terms">
+                    <label className='agree' htmlFor="terms">
                         I agree to WellTrack Terms of service and Privacy policy
                     </label>
                 </div>
@@ -85,10 +82,6 @@ const Signup = () => {
                     Create an account
                 </button>
                 <p className="or-divider">or</p>
-                <button className="google-button">
-                    <img src={gg_logo} alt="Google logo" />
-                    Continue with Google
-                </button>
                 <p className="login-prompt">
                     Already have an account? <a href="/login" className="login-link">Login</a>
                 </p>

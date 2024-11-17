@@ -35,8 +35,142 @@
     margin-bottom: 0px;
 }
 
-/* @media (max-width: 768px) {
-    .menu-icon {
-        display: block;
+.cancel-modal,
+.save-modal {
+    margin-top: 10px;
+    width: 130px;
+    height: 35px;
+    margin-right: 10px;
+}
 
-    } */
+.cancel-modal {
+    color: white;
+    background-color: #E16449;
+    border: 1px solid #E16449;
+
+}
+
+.save-modal1 {
+    width: 200px;
+    height: 35px;
+    margin-right: -10px;
+    background-color: #E16449;
+    border: 1px solid #E16449;
+    color: white;
+    margin-right: 9px;
+    border-radius: 3px;
+}
+
+.cancel-modal1 {
+    width: 200px;
+    height: 35px;
+}
+
+.modal-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.close-modal {
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.modal,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.2;
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 220px;
+    padding-left: 10px;
+    padding-top: 0px;
+}
+
+.modal-content-1 {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.2;
+    background-color: white;
+    border-radius: 10px;
+    width: 450px;
+    height: 350px;
+    padding-left: 10px;
+    padding-top: 0px;
+}
+
+.name-input1,
+.email-input1 {
+    border-radius: 3px;
+    height: 25px;
+    border: 2px solid #BABCC3;
+    width: 280px;
+}
+
+.password-input1 {
+    border-radius: 3px;
+    height: 25px;
+    border: 2px solid #BABCC3;
+    width: 350px;
+
+}
+
+.title-input,
+.name-input-again,
+.email-input-again,
+.password-input-again {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+    button.save-button {
+        margin-left: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    button.save-button {
+        margin-left: 350px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .setting {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    button.save-button {
+        margin-left: 150px;
+    }
+
+}

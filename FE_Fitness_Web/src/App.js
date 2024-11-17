@@ -1,102 +1,93 @@
 import React, { useState } from 'react';
 import Signup from './components/pages/Signup';
-import Login from './components/pages/Login'; // Import the Login component
-// import Resetpw from './components/pages/Resetpw';
+import Login from './components/pages/Login';
 import Setting from './components/pages/Setting';
 import Sidebar from './components/reuse/Sidebar';
-import MyExcerise from './components/pages/MyExcerise';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
+import Dashboard from './components/pages/Dashboard';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import MyExcerise from './components/pages/MyExcerise';
 
 const App = () => {
-  const [isSignupComplete, setIsSignupComplete] = useState(false);
-  const [isLoginComplete, setIsLoginComplete] = useState(false);
+  const [isLoginComplete, setIsLoginComplete] = useState(!!localStorage.getItem('token'));
+
   const completeSignup = () => {
-    setIsSignupComplete(true);
+    console.log('Signup complete');
   };
-  const completeLogin = () => {
+
+  const completeLogin = (token) => {
+    localStorage.setItem('token', token); // Lưu token vào localStorage
     setIsLoginComplete(true);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // Xóa token khi logout
+    setIsLoginComplete(false);
   };
 
   return (
     <Router>
       <div className="app">
         <Routes>
-          {/* Route for Sign up */}
+          {/* Route cho Login */}
           <Route
-            path="/signup"
-            element={<Signup onComplete={completeSignup} />}
+            path="/login"
+            element={<Login onComplete={completeLogin} />}
           />
-          {/* Route for Log in */}
           <Route
             path="/"
             element={<Login onComplete={completeLogin} />}
           />
-          {/* Protected Dashboard Routes */}
-          {/* <Route
+          {/* Route cho Sign up */}
+          <Route
+            path="/signup"
+            element={<Signup onComplete={completeSignup} />}
+          />
+          {/* Protected Route cho Dashboard */}
+          <Route
             path="/dashboard"
             element={
               isLoginComplete ? (
                 <>
-                  <SideBar />
+                  <Sidebar onLogout={handleLogout} />
                   <Dashboard />
                 </>
               ) : (
-                <Navigate to="/" /> // Redirect to Authentication if not authenticated
+                <Navigate to="/login" />
               )
             }
-          /> */}
-          {/* ProtectedMy Excerise Routes */}
-          <Route
-          // path="/myexcersise"
-          // element={
-          //   isLoginComplete ? (
-          //     <>
-          //       {/* <SideBar /> */}
-          //       <MyExcerise />
-          //     </>
-          //   ) : (
-          //     <Navigate to="/" />
-          //   )
-          // }
           />
-
-          {/* Protected Setting Routes */}
-          {/* <Route
+          {/* Protected Route cho My Excerise */}
+          <Route
+            path="/myexercise"
+            element={
+              isLoginComplete ? (
+                <>
+                  <Sidebar onLogout={handleLogout} />
+                  <MyExcerise />
+                </>
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
+          />
+          {/* Protected Route cho Setting */}
+          <Route
             path="/setting"
             element={
               isLoginComplete ? (
                 <>
-                  <Sidebar />
+                  <Sidebar onLogout={handleLogout} />
                   <Setting />
                 </>
               ) : (
-                <Navigate to="/" />
+                <Navigate to="/login" />
               )
-            }
-          /> */}
-          <Route
-            path="/setting"
-            element={
-              <>
-                <Sidebar />
-                <Setting />
-              </>
-            }
-          />
-          <Route
-            path="/myexcerise"
-            element={
-              <>
-                <Sidebar />
-                <MyExcerise />
-
-              </>
             }
           />
         </Routes>
       </div>
-    </Router >
+    </Router>
   );
 };
 

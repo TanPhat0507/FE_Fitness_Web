@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../../styles/pages/Login.css';
 import { useNavigate } from 'react-router-dom';
-import gg_logo from '../../images/gg_icon.png';
+
 import logo from '../../images/Logo.svg';
+
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -30,8 +31,9 @@ const Login = () => {
                 },
                 body: JSON.stringify(loginData),
             });
-
+            const data = await response.json();
             if (response.ok) {
+                localStorage.setItem('token', data.token);
                 setError('');
                 navigate('/dashboard');
             } else {
@@ -124,10 +126,7 @@ const Login = () => {
                             Login
                         </button>
                         <p className="or-divider">or</p>
-                        <button className="google-button">
-                            <img src={gg_logo} alt="Google logo" />
-                            Continue with Google
-                        </button>
+
                         <p className="signup-prompt">
                             You haven't had an account? <a href="/signup" className="signup-link">Sign up</a>
                         </p>
