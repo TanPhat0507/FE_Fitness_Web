@@ -3,8 +3,7 @@ import edit from "../../images/Edit.svg";
 import { message, Button } from 'antd';
 
 import '../../styles/pages/Setting.css';
-// {/* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-// <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> */}
+
 const Setting = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -21,7 +20,7 @@ const Setting = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/users`, {
+                const response = await fetch("http://localhost:3001/api/users/setting", {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -33,9 +32,6 @@ const Setting = () => {
                 console.log('User Data:', data);
                 if (response.ok) {
                     const userData = data.user;
-                    // const goalData = data.goal; // Use the first goal if available
-                    // console.log('User Data:', userData);
-                    // console.log('Goal Data:', goalData);
 
                     setName(userData.name);
                     setEmail(userData.email);
@@ -50,8 +46,6 @@ const Setting = () => {
         fetchUserData();
     }, [token]);
 
-
-
     const toggleModal1 = () => setModal1(!modal1);
     const toggleModal2 = () => setModal2(!modal2);
     const toggleModal3 = () => setModal3(!modal3);
@@ -64,7 +58,7 @@ const Setting = () => {
             password,
         };
 
-        fetch(`http://localhost:3000/api/users/setting`, {
+        fetch("http://localhost:3001/api/users/setting", {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -93,7 +87,7 @@ const Setting = () => {
                 {/* Name Section */}
                 <div className="name">
                     <p className="title-input">Name</p>
-                    <input type="text" className="name-input" />
+                    <input type="text" className="name-input" value={name} readOnly />
                     <img onClick={toggleModal1} src={edit} alt="edit" className="edit-icon-name" />
                     {modal1 && (
                         <div className="modal">
@@ -108,8 +102,7 @@ const Setting = () => {
                                     <button className="cancel-modal" onClick={toggleModal1}>Cancel</button>
                                     <button className="save-modal" onClick={updateUserData}>Save</button>
                                 </div>
-                                <Button className="close-button" onClick={toggleModal1} classtype="secondary">X</Button>
-
+                                <Button className="close-button" onClick={toggleModal1} type="secondary">X</Button>
                             </div>
                         </div>
                     )}
@@ -118,7 +111,7 @@ const Setting = () => {
                 {/* Email Section */}
                 <div className="email">
                     <p className="title-input">Email</p>
-                    <input type="email" className="email-input" />
+                    <input type="email" className="email-input" value={email} readOnly />
                     <img onClick={toggleModal2} src={edit} alt="edit" className="edit-icon-email" />
                     {modal2 && (
                         <div className="modal">
@@ -133,7 +126,7 @@ const Setting = () => {
                                     <button className="cancel-modal" onClick={toggleModal2}>Cancel</button>
                                     <button className="save-modal" onClick={updateUserData}>Save</button>
                                 </div>
-                                <Button className='close-button' onClick={toggleModal2} >X</Button>
+                                <Button className='close-button' onClick={toggleModal2}>X</Button>
                             </div>
                         </div>
                     )}
@@ -142,7 +135,7 @@ const Setting = () => {
                 {/* Password Section */}
                 <div className="password">
                     <p className="title-input">Password</p>
-                    <input type="password" className="password-input" />
+                    <input type="password" className="password-input" readOnly />
                     <img onClick={toggleModal3} src={edit} alt="edit" className="edit-icon-password" />
                     {modal3 && (
                         <div className="modal">
@@ -161,7 +154,7 @@ const Setting = () => {
                                     <button className="cancel-modal1" onClick={toggleModal3}>Cancel</button>
                                     <button className="save-modal1" onClick={updateUserData}>Save</button>
                                 </div>
-                                <Button className="close-button" onClick={toggleModal3} classtype="secondary">X</Button>
+                                <Button className="close-button" onClick={toggleModal3} type="secondary">X</Button>
                             </div>
                         </div>
                     )}
@@ -170,4 +163,5 @@ const Setting = () => {
         </div>
     );
 };
+
 export default Setting;

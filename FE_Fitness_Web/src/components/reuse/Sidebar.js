@@ -4,7 +4,7 @@ import { MenuOutlined } from '@ant-design/icons';
 import { Link, useNavigate } from 'react-router-dom';
 import dashboard from '../../images/Dashboard.svg';
 import exercise from '../../images/Excerise.svg';
-import report from '../../images/Report.svg';
+
 import setting from '../../images/Settings.svg';
 import logout from '../../images/Logout.svg';
 import logo from '../../images/Logo.svg';
@@ -62,9 +62,6 @@ const SideBar = () => {
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="3">
-                        <img src={report} alt="Report" className="icon" />
-                    </Menu.Item>
-                    <Menu.Item key="4">
                         <Link to="/setting">
                             <img src={setting} alt="Setting" className="icon" />
                         </Link>

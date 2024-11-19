@@ -24,7 +24,7 @@ const MyExcerise = () => {
     const [selectedRecord, setSelectedRecord] = useState(null);
     const [exerciseDetails, setExerciseDetails] = useState([]);
     const [status, setStatus] = useState([null])
-    // const { setSelectedDate } = useContext(DateContext);
+    const { selectedDate, setSelectedDate } = useContext(DateContext);  // Get the selected date and setSelectedDate from context
     // Toggle Modal 
     const toggleModal1 = () => {
         setModal1(!modal1);
@@ -83,16 +83,16 @@ const MyExcerise = () => {
         handleGetExercise(calendar);
     }, [calendar]);
 
-    // useEffect(() => {
-    //     handleEdit(exerciseID);
-    // }, [status]);
+    useEffect(() => {
+        handleGetExercise(selectedDate);  // Use the selected date from context to fetch exercises
+    }, [selectedDate]);
 
     const handleAddcalendar = async (date) => {
         try {
             const token = localStorage.getItem('token');
             console.log(token);
             console.log({ 'We are running in handleAddCaledar ': date });
-            const diaryresponse = await fetch(`http://localhost:3000/api/diaries`, {
+            const diaryresponse = await fetch(`http://localhost:3001/api/diaries`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -124,7 +124,7 @@ const MyExcerise = () => {
 
         const formattedDate = previousDay.toISOString().split('T')[0]; // Format date to YYYY-MM-DD
         console.log(formattedDate);
-        //setSelectedDate(formattedDate);
+        setSelectedDate(formattedDate);
         setCalendar(formattedDate); // Update the calendar state
         handleAddcalendar(formattedDate); // Pass the adjusted date to handleAddcalendar
     };
@@ -137,7 +137,7 @@ const MyExcerise = () => {
             const token = localStorage.getItem('token');
             console.log('Token:', token);
 
-            const response = await fetch('http://localhost:3000/api/exercises', {
+            const response = await fetch('http://localhost:3001/api/exercises', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -165,7 +165,7 @@ const MyExcerise = () => {
             const token = localStorage.getItem('token');
             console.log('Token:', token);
 
-            const userResponse = await fetch(`http://localhost:3000/api/exercises?date=${encodeURIComponent(date)}`, {
+            const userResponse = await fetch(`http://localhost:3001/api/exercises?date=${encodeURIComponent(date)}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -205,7 +205,7 @@ const MyExcerise = () => {
     const handleShowexercise = async () => {
         try {
             const token = localStorage.getItem('token');
-            const userResponse = await fetch(`http://localhost:3000/api/exercises/details/${exerciseID}`, {
+            const userResponse = await fetch(`http://localhost:3001/api/exercises/details/${exerciseID}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -246,7 +246,7 @@ const MyExcerise = () => {
             console.log("date", date);
             console.log(`Editing exercise with id: ${id}`);
 
-            const response = await fetch(`http://localhost:3000/api/exercises/${id}`, {
+            const response = await fetch(`http://localhost:3001/api/exercises/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -256,7 +256,7 @@ const MyExcerise = () => {
             });
 
             if (response.ok) {
-                const userResponse = await fetch(`http://localhost:3000/api/exercises?date=${encodeURIComponent(date)}`, {
+                const userResponse = await fetch(`http://localhost:3001/api/exercises?date=${encodeURIComponent(date)}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -303,7 +303,7 @@ const MyExcerise = () => {
             const date = calendar;
             console.log("date", date)
             console.log(`Deleting food with exId: ${id}`);
-            const response = await fetch(`http://localhost:3000/api/exercises/${id}`, {
+            const response = await fetch(`http://localhost:3001/api/exercises/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,

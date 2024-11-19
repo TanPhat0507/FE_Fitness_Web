@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../../styles/pages/Login.css';
 import { useNavigate } from 'react-router-dom';
 
+
 import logo from '../../images/Logo.svg';
 
 
@@ -24,16 +25,27 @@ const Login = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3000/api/users/login', {
+            const response = await fetch('http://localhost:3001/api/users/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(loginData),
             });
-            const data = await response.json();
+
             if (response.ok) {
+                const data = await response.json();
+
+                // Lưu token, userID và userName vào localStorage
                 localStorage.setItem('token', data.token);
+                localStorage.setItem('userID', data.userID);
+                localStorage.setItem('userName', data.name);
+
+                // Kiểm tra thông tin đã được lưu vào localStorage chưa
+                console.log('Stored Token:', localStorage.getItem('token'));
+                console.log('Stored UserID:', localStorage.getItem('userID'));
+                console.log('Stored User Name:', localStorage.getItem('userName'));
+
                 setError('');
                 navigate('/dashboard');
             } else {
@@ -44,6 +56,7 @@ const Login = () => {
             setError('An error occurred during login.');
         }
     };
+
 
     const handleForgotPassword = async () => {
         if (!email) {
