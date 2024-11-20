@@ -1,0 +1,195 @@
+.myexcersise {
+
+    margin-left: 90px;
+    padding-left: 50px;
+    width: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-modal {
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    background-color: #E16449;
+    border-radius: 10px;
+    color: #FFFF;
+    display: flex;
+}
+
+.calendar {
+    width: 150px;
+    z-index: 50px;
+    margin-bottom: 20px;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.modal2 {
+    z-index: 1200;
+}
+
+.modal1 {
+    z-index: 1000;
+}
+
+.modal1,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 10px;
+    width: 350px;
+    height: 465px;
+    /* overflow-y: auto; */
+}
+
+.modal-content2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 10px;
+    max-width: 800px;
+    min-width: 500px;
+    height: 320px;
+    overflow: hidden;
+}
+
+.excersise_name,
+.time,
+.your_weight,
+.calories_burned {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#time-input,
+#weight-input {
+    border-radius: 3px;
+    height: 25px;
+    border: 2px solid #BABCC3;
+}
+
+.status_selection {
+    border-radius: 3px;
+    height: 30px;
+    border: 2px solid #BABCC3;
+}
+
+.add-button {
+    align-self: center;
+    /* width: 100%; */
+    width: 150px;
+    height: 40px;
+    background-color: #E16449;
+    border-radius: 10px;
+    color: #FFFF;
+    display: flex;
+    margin-left: 170px;
+}
+
+.modal1-title,
+.modal2-title {
+    padding-top: 12px;
+}
+
+.control_modal4 {
+    justify-content: space-between;
+    display: flex;
+}
+
+.save-button {
+    align-self: center;
+    width: 200px;
+    height: 40px;
+    background-color: #E16449;
+    border-radius: 10px;
+    color: #FFFF;
+    display: flex;
+    font-size: 14px;
+    /* margin-left: 77px; */
+}
+
+.cancel-button {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.cancel_title {
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    border: none;
+    display: flex;
+    width: 25px;
+    background-color: transparent;
+}
+
+
+.excersise-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.choose-button {
+    background-color: #E16449;
+    color: white;
+    border: none;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.table {
+    width: 100%;
+}
+
+.custom-table .ant-table-thead>tr>th {
+    background-color: #FCF0ED;
+    color: black;
+}

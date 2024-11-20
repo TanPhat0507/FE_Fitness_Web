@@ -1,0 +1,184 @@
+/* Login.css */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.logo-top-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 30px;
+}
+
+.login-box {
+    margin-top: 50px;
+    width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: start;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.input-container {
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e05a33;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.login-button:hover{
+    background-color: #EB9785;
+}
+
+.login-button:active{
+    background-color:#5F2A1F;
+    
+}
+
+.or-divider {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.google-button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+
+.google-button:hover{
+    background-color: #e05a33;
+}
+
+.google-button:active{
+    background-color:#5F2A1F;
+    
+}
+
+
+.google-button img {
+    margin-right: 10px;
+    height: 18px;
+}
+
+.signup-prompt {
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-prompt .signup-link {
+    color: #e05a33;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* Forgot Password Case (Case 2) */
+
+h2.Forgot_pw{
+    margin-bottom: 30px;
+}
+.reset-password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    padding: 10px;
+}
+
+p.enter_email{
+    margin-top:-20px;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    margin-bottom: 30px;
+}
+.reset-password-input-container {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.reset-password-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e05a33;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.reset-password-button:hover {
+    background-color: #EB9785;
+}
+
+.reset-password-button:active {
+    background-color: #5F2A1F;
+}
+
+.back-to-login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #e05a33;
+    border: 1px solid #e05a33 ;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.back-to-login-button:hover{
+    color: white;
+    background-color: #e05a33;
+}
