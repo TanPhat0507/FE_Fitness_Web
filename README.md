@@ -33,16 +33,19 @@ Before starting to make this app, we strived to research as much as possible to 
 - Backend: Node.js (Express.js)
 - Database: MySQL
 
-Authentication:
+**Authentication**:
 
 ![image](https://github.com/user-attachments/assets/2466eb8e-a66f-4391-a12c-3b0e89fa441a)
-Dashboard:
+
+**Dashboard**:
 
 ![image](https://github.com/user-attachments/assets/bdba30b8-4285-431f-96ca-18b3d1ef916b)
-My exercise:
+
+**My exercise**:
 
 ![image](https://github.com/user-attachments/assets/b4c8bb5e-a36e-4f94-a6f2-08f9f846f16b)
-Setting:
+
+**Setting**:
 
 ![image](https://github.com/user-attachments/assets/97e35a8e-c52f-49f5-a832-fc77d0b94a61)
 
