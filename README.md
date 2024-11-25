@@ -20,12 +20,12 @@ We created WellTrack to simplify fitness and help users achieve their health goa
     
     *“We had to created a lot of version to choose the best one and here are some reason why it was better than other games.”*
     
-    - **Benefits:**
+    - Benefits:
         - Tailored workouts to suit individual fitness levels
         - Real-time tracking helps stay motivated and accountable
         - Simplifies calorie and nutrition management
         - Visual progress reports make achievements clear
-    - **Drawbacks**
+    - Drawbacks:
         - Limited workout variety for people not in gym workout
         - Overwhelming notifications for some users
         - Not show details about workout situations
@@ -62,5 +62,7 @@ Setting:
 ## **Reference**
 
 Web fitnesspal: https://www.myfitnesspal.com/
+
 PPT: https://www.canva.com/design/DAGWbWGKvmk/hcnKnjZFhGlnM1Yr5qojcg/edit
+
 My web: https://deploy-fe-ten.vercel.app/dashboard?fbclid=IwY2xjawGxdhdleHRuA2FlbQIxMAABHVC1lPw2dMkCzr5tdVPfm882Bc1T4dOX6riWxL7-VJqChx51w97cytEyvA_aem_AFCvanzT8NozRF2yGoV_dw
