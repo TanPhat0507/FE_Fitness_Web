@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+## **Well Track Web**
+## **What?**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**WellTrack** is a fitness app that offers guided workouts, exercise-based calorie tracking, and personalized progress monitoring to help users achieve their health goals.
 
-## Available Scripts
+## **Why?**
 
-In the project directory, you can run:
+We created WellTrack to simplify fitness and help users achieve their health goals. With guided workouts, exercise-based calorie tracking, and personalized progress monitoring, our app empowers users to stay motivated and on track, making fitness easier and more effective.
 
-### `npm start`
+## **Literature review**
+    ![image](https://github.com/user-attachments/assets/bab268aa-25a7-4b2e-93b6-5fa420db2baa)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    ## Market research
+    
+    Before starting to make this app, we strived to research as much as possible to explore some same apps in the market on internet.
+    
+    ## Current solution
+    
+    There are some methods that we think they are better than other games in the market:
+    
+    *“We had to created a lot of version to choose the best one and here are some reason why it was better than other games.”*
+    
+    - **Benefits:**
+        - Tailored workouts to suit individual fitness levels
+        - Real-time tracking helps stay motivated and accountable
+        - Simplifies calorie and nutrition management
+        - Visual progress reports make achievements clear
+    - **Drawbacks**
+        - Limited workout variety for people not in gym workout
+        - Overwhelming notifications for some users
+        - Not show details about workout situations
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Tools & Technologies**
 
-### `npm test`
+Frontend: React.js
+Backend: Node.js (Express.js)
+Database: MySQL
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Authentication:
+![image](https://github.com/user-attachments/assets/2466eb8e-a66f-4391-a12c-3b0e89fa441a)
+Dashboard:
+![image](https://github.com/user-attachments/assets/bdba30b8-4285-431f-96ca-18b3d1ef916b)
+My exercise:
+![image](https://github.com/user-attachments/assets/b4c8bb5e-a36e-4f94-a6f2-08f9f846f16b)
+Setting:
+![image](https://github.com/user-attachments/assets/97e35a8e-c52f-49f5-a832-fc77d0b94a61)
 
-### `npm run build`
+## **Constraints**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- There were some logic errors regarding the win-loss conditions based on time and the number of bricks. It took us quite some time to troubleshoot and fix, affecting the overall progress of the project.
+- Ensuring movement of game elements such as ball and paddle is a formidable challenge
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **Desired improvements**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Dynamic Levels:** Introduce dynamic and challenging levels to add variety and keep players engaged. Dynamic elements could include moving bricks, changing shapes, or altering paddle behavior.
+- **Interactive Power-ups:** Enhance the gaming experience with a variety of interactive power-ups. These could include speed boosts, multi-ball features, or temporary shields, adding strategic depth to gameplay.
+- **Social Features:** Implement social features to encourage player interaction. This could involve adding leaderboards, achievements, or multiplayer options to create a more connected gaming community.
+- **Customization Options:** Allow players to customize their gaming experience. This might involve choosing different paddle styles, ball designs, or even background themes to add a personal touch.
+- **Sound and Music Enhancements:** Elevate the audio experience with dynamic sound effects and background music that complement the game's pacing and intensity. A well-crafted soundtrack can enhance immersion.
+- **Feedback Mechanisms:** Implement clear feedback mechanisms to inform players of their progress, achievements, and in-game events. Visual and audio cues can enhance the overall feedback experience.
 
-### `npm run eject`
+## **Reference**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Web fitnesspal: https://www.myfitnesspal.com/
+PPT: https://www.canva.com/design/DAGWbWGKvmk/hcnKnjZFhGlnM1Yr5qojcg/edit
+My web: https://deploy-fe-ten.vercel.app/dashboard?fbclid=IwY2xjawGxdhdleHRuA2FlbQIxMAABHVC1lPw2dMkCzr5tdVPfm882Bc1T4dOX6riWxL7-VJqChx51w97cytEyvA_aem_AFCvanzT8NozRF2yGoV_dw
