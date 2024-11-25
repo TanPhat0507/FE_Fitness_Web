@@ -16,21 +16,23 @@ Before starting to make this app, we strived to research as much as possible to 
 
 - Benefits:
 
-- **Tailored workouts to suit individual fitness levels**
-- **Real-time tracking helps stay motivated and accountable**
-- **Simplifies calorie and nutrition management**
-- **Visual progress reports make achievements clear**
+**Tailored workouts to suit individual fitness levels**
+**Real-time tracking helps stay motivated and accountable**
+**Simplifies calorie and nutrition management**
+**Visual progress reports make achievements clear**
 
 - Drawbacks:
 
-- **Limited workout variety for people not in gym workout**
-- **Overwhelming notifications for some users**
-- **Not show details about workout situations**
+**Limited workout variety for people not in gym workout**
+**Overwhelming notifications for some users**
+**Not show details about workout situations**
 
 ## **Tools & Technologies**
 
 Frontend: React.js
+
 Backend: Node.js (Express.js)
+
 Database: MySQL
 
 Authentication:
