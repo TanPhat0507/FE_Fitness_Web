@@ -1,4 +1,4 @@
-## **Well Track Web**
+## **WELL TRACK WEB**
 ## **What?**
 
 **WellTrack** is a fitness app that offers guided workouts, exercise-based calorie tracking, and personalized progress monitoring to help users achieve their health goals.
@@ -30,7 +30,7 @@ Before starting to make this app, we strived to research as much as possible to 
 ## **Tools & Technologies**
 
 - Frontend: React.js
-- Backend: Node.js (Express.js)
+- Backend: Node.js (Express)
 - Database: MySQL
 
 **Authentication**:
