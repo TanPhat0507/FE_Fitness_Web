@@ -8,18 +8,12 @@
 We created WellTrack to simplify fitness and help users achieve their health goals. With guided workouts, exercise-based calorie tracking, and personalized progress monitoring, our app empowers users to stay motivated and on track, making fitness easier and more effective.
 
 ## **Literature review**
-    ![image](https://github.com/user-attachments/assets/bab268aa-25a7-4b2e-93b6-5fa420db2baa)
 
     ## Market research
     
     Before starting to make this app, we strived to research as much as possible to explore some same apps in the market on internet.
-    
-    ## Current solution
-    
-    There are some methods that we think they are better than other games in the market:
-    
-    *“We had to created a lot of version to choose the best one and here are some reason why it was better than other games.”*
-    
+
+      ![image](https://github.com/user-attachments/assets/867a16ec-4b9b-423b-a56c-3fe9cae26f94)
     - Benefits:
         - Tailored workouts to suit individual fitness levels
         - Real-time tracking helps stay motivated and accountable
@@ -37,12 +31,16 @@ Backend: Node.js (Express.js)
 Database: MySQL
 
 Authentication:
+
 ![image](https://github.com/user-attachments/assets/2466eb8e-a66f-4391-a12c-3b0e89fa441a)
 Dashboard:
+
 ![image](https://github.com/user-attachments/assets/bdba30b8-4285-431f-96ca-18b3d1ef916b)
 My exercise:
+
 ![image](https://github.com/user-attachments/assets/b4c8bb5e-a36e-4f94-a6f2-08f9f846f16b)
 Setting:
+
 ![image](https://github.com/user-attachments/assets/97e35a8e-c52f-49f5-a832-fc77d0b94a61)
 
 ## **Constraints**
