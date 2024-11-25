@@ -12,8 +12,8 @@ We created WellTrack to simplify fitness and help users achieve their health goa
 - Market research:
 Before starting to make this app, we strived to research as much as possible to explore some same apps in the market on internet.
 
-![image](https://github.com/user-attachments/assets/867a16ec-4b9b-423b-a56c-3fe9cae26f94)
-  
+![image](https://github.com/user-attachments/assets/7804a7af-2620-4da9-8e52-16d443a9e9fe)
+
 - Benefits:
 
 - **Tailored workouts to suit individual fitness levels**
