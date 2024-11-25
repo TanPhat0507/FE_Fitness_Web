@@ -9,31 +9,29 @@ We created WellTrack to simplify fitness and help users achieve their health goa
 
 ## **Literature review**
 
-- Market research:
+**Market research**:
 Before starting to make this app, we strived to research as much as possible to explore some same apps in the market on internet.
 
 ![image](https://github.com/user-attachments/assets/7804a7af-2620-4da9-8e52-16d443a9e9fe)
 
-- Benefits:
+**Benefits**:
 
-**Tailored workouts to suit individual fitness levels**
-**Real-time tracking helps stay motivated and accountable**
-**Simplifies calorie and nutrition management**
-**Visual progress reports make achievements clear**
+- Tailored workouts to suit individual fitness levels
+- Real-time tracking helps stay motivated and accountable
+- Simplifies calorie and nutrition management
+- Visual progress reports make achievements clear
 
-- Drawbacks:
+**Drawbacks**:
 
-**Limited workout variety for people not in gym workout**
-**Overwhelming notifications for some users**
-**Not show details about workout situations**
+- Limited workout variety for people not in gym workout
+- Overwhelming notifications for some users
+- Not show details about workout situations
 
 ## **Tools & Technologies**
 
-Frontend: React.js
-
-Backend: Node.js (Express.js)
-
-Database: MySQL
+- Frontend: React.js
+- Backend: Node.js (Express.js)
+- Database: MySQL
 
 Authentication:
 
@@ -64,8 +62,6 @@ Setting:
 
 ## **Reference**
 
-Web fitnesspal: https://www.myfitnesspal.com/
-
-PPT: https://www.canva.com/design/DAGWbWGKvmk/hcnKnjZFhGlnM1Yr5qojcg/edit
-
-My web: https://deploy-fe-ten.vercel.app/dashboard?fbclid=IwY2xjawGxdhdleHRuA2FlbQIxMAABHVC1lPw2dMkCzr5tdVPfm882Bc1T4dOX6riWxL7-VJqChx51w97cytEyvA_aem_AFCvanzT8NozRF2yGoV_dw
+- Web fitnesspal: https://www.myfitnesspal.com/
+- PPT: https://www.canva.com/design/DAGWbWGKvmk/hcnKnjZFhGlnM1Yr5qojcg/edit
+- My web: https://deploy-fe-ten.vercel.app/dashboard?fbclid=IwY2xjawGxdhdleHRuA2FlbQIxMAABHVC1lPw2dMkCzr5tdVPfm882Bc1T4dOX6riWxL7-VJqChx51w97cytEyvA_aem_AFCvanzT8NozRF2yGoV_dw
