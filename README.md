@@ -9,20 +9,23 @@ We created WellTrack to simplify fitness and help users achieve their health goa
 
 ## **Literature review**
 
-    ## Market research
-    
-    Before starting to make this app, we strived to research as much as possible to explore some same apps in the market on internet.
+- Market research:
+Before starting to make this app, we strived to research as much as possible to explore some same apps in the market on internet.
 
       ![image](https://github.com/user-attachments/assets/867a16ec-4b9b-423b-a56c-3fe9cae26f94)
-    - Benefits:
-        - Tailored workouts to suit individual fitness levels
-        - Real-time tracking helps stay motivated and accountable
-        - Simplifies calorie and nutrition management
-        - Visual progress reports make achievements clear
-    - Drawbacks:
-        - Limited workout variety for people not in gym workout
-        - Overwhelming notifications for some users
-        - Not show details about workout situations
+  
+- Benefits:
+
+- **Tailored workouts to suit individual fitness levels**
+- **Real-time tracking helps stay motivated and accountable**
+- **Simplifies calorie and nutrition management**
+- **Visual progress reports make achievements clear**
+
+- Drawbacks:
+
+- **Limited workout variety for people not in gym workout**
+- **Overwhelming notifications for some users**
+- **Not show details about workout situations**
 
 ## **Tools & Technologies**
 
